@@ -6,7 +6,6 @@ from pyrogram.client import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton 
 from pyrogram.errors import FloodWait
 from info import *
-from plugins.utils import create_image, get_ai_response 
 from .db import *
 from .fsub import get_fsub
 
@@ -21,9 +20,15 @@ async def startcmd(client: Client, message: Message):
             text=f"#New_user_started\n\nUser: {message.from_user.mention()}\nid :{message.from_user.id}",
         )
     if FSUB and not await get_fsub(client, message):return
+    rm = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton("✨Click to view Terabox Video", web_app=WebAppInfo(url=f"https://devbotstbd.netlify.app"))
+        ]] 
+    )
     await message.reply_photo(# type:ignore
-        photo="https://telegra.ph/file/595e38a4d76848c01b110.jpg",
-        caption=f"<b>Jai Shree Krishna {userMention},\n\nIᴍ Hᴇʀᴇ Tᴏ Rᴇᴅᴜᴄᴇ Yᴏᴜʀ Pʀᴏʙʟᴇᴍs..\nYᴏᴜ Cᴀɴ Usᴇ Mᴇ As ʏᴏᴜʀ Pʀɪᴠᴀᴛᴇ Assɪsᴛᴀɴᴛ..\nAsᴋ Mᴇ Aɴʏᴛʜɪɴɢ...Dɪʀᴇᴄᴛʟʏ..\n\nMʏ Cʀᴇᴀᴛᴏʀ : <a href=https://t.me/biisal>Bɪɪsᴀʟ</a>\nMʏ Lᴏᴠᴇʀ : <a href=tg://settings/>Tʜɪs Pᴇʀsᴏɴ</a></b>",
+        photo="https://graph.org/file/2e454fc046ea16675451c-1f8167df679f40f92c.jpg",
+        caption=f"<b>Hey {userMention},\n\nIᴍ Hᴇʀᴇ Tᴏ Rᴇᴅᴜᴄᴇ Yᴏᴜʀ Pʀᴏʙʟᴇᴍs..\nYou can use me to view terabox content for free\n\nMʏ Cʀᴇᴀᴛᴏʀ : <a href=https://t.me/Champaklalbot>Champaklal</a>\nMʏ Lᴏᴠᴇʀ : <a href=tg://settings/>Tʜɪs Pᴇʀsᴏɴ</a></b>",
+        reply_markup=rm,
     ) 
     return
 
