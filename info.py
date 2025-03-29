@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_ID = environ.get("API_ID" , "2099007")
-API_HASH = environ.get("API_HASH" , "b1b3d7b3b1b3d7b3b1b3d7b3b1b3d7b3")
-BOT_TOKEN = environ.get("BOT_TOKEN" , "2099007:AAH1b3d7b3b1b3d7b3b1b3d7b3b1b3d7b3")
-ADMIN = int(environ.get("ADMIN" , "1847899007"))
+API_ID = environ.get("API_ID" , "10412514")
+API_HASH = environ.get("API_HASH" , "4d55a7064ad72adcfa8944f505453a8c")
+BOT_TOKEN = environ.get("BOT_TOKEN" , "7666348795:AAHrMbMMY7OUuPAbK9nGDt7iv1-x1bKKc_8")
+ADMIN = int(environ.get("ADMIN" , "1065743814"))
 CHAT_GROUP = int(environ.get("CHAT_GROUP", "-100"))
-LOG_CHANNEL = environ.get("LOG_CHANNEL", "-100")
-MONGO_URL = environ.get("MONGO_URL" , "mongodb://localhost:27017")
+LOG_CHANNEL = environ.get("LOG_CHANNEL", "-1002454478302")
+MONGO_URL = environ.get("MONGO_URL" , "mongodb+srv://Dsrpdf2k25:Dsrpdf2k25@cluster0.wmt2w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 AUTH_CHANNEL = int(
     environ.get("AUTH_CHANNEL", "-1001734958816")
 )
