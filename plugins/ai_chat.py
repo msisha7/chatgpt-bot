@@ -25,11 +25,13 @@ async def startcmd(client: Client, message: Message):
             InlineKeyboardButton("✨Click to view Terabox Video", web_app=WebAppInfo(url=f"https://devbotstbd.netlify.app"))
         ]] 
     )
-    await message.reply_photo(# type:ignore
+    k = await message.reply_photo(# type:ignore
         photo="https://graph.org/file/2e454fc046ea16675451c-1f8167df679f40f92c.jpg",
         caption=f"<b>Hey {userMention},\n\nIᴍ Hᴇʀᴇ Tᴏ Rᴇᴅᴜᴄᴇ Yᴏᴜʀ Pʀᴏʙʟᴇᴍs..\nYou can use me to view terabox content for free\n\nMʏ Cʀᴇᴀᴛᴏʀ : <a href=https://t.me/Champaklalbot>Champaklal</a>\nMʏ Lᴏᴠᴇʀ : <a href=tg://settings/>Tʜɪs Pᴇʀsᴏɴ</a></b>",
         reply_markup=rm,
-    ) 
+    )
+    await asyncio.sleep(300)
+    await k.delete()
     return
 
 
