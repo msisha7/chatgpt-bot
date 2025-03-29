@@ -3,7 +3,7 @@ import asyncio
 import random
 from pyrogram import filters
 from pyrogram.client import Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton 
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from pyrogram.errors import FloodWait
 from info import *
 from .db import *
